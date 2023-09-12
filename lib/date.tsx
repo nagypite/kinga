@@ -7,11 +7,9 @@ export function getMonthInterval(start?: Date): Date[] {
 
   // calculate first day of month
   let firstDay = new Date(start)
-  console.log('firstDay', firstDay.toISOString())
   firstDay.setDate(1)
 
   // rewind to last Monday (or keep it at Sunday)
-  console.log('rewind', firstDay.toISOString(), firstDay.getDay())
   if (firstDay.getDay() > 1) {
     firstDay.setDate(firstDay.getDate() - firstDay.getDay())
   }

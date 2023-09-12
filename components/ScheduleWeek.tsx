@@ -5,6 +5,6 @@ type Props = {
 
 export default function ScheduleWeek({week}: Props) {
   return (
-
+    <p>ScheduleWeek</p>
   )
 }

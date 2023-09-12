@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon, UserGroupIcon } from '@heroicons/react/24/outline'
@@ -25,7 +26,7 @@ const userNavigation = [
   { name: 'Sign out', href: '#' },
 ]
 
-function classNames(...classes) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
@@ -42,7 +43,7 @@ export default function Home() {
                     <div className="flex-shrink-0">
                       <UserGroupIcon className="h-6 w-6 text-gray-500" aria-hidden="true" />
                     </div>
-                    <h1 className="px-3 py-2 text-sm text-gray-500 font-medium">{meta.title}</h1>
+                    <h1 className="px-3 py-2 text-sm text-gray-500 font-medium">kinga</h1>
                     <div className="hidden md:block">
                       <div className="ml-10 flex items-baseline space-x-4">
                         {navigation.map((item) => (
@@ -80,7 +81,7 @@ export default function Home() {
                           <Menu.Button className="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                             <span className="absolute -inset-1.5" />
                             <span className="sr-only">Open user menu</span>
-                            <img className="h-8 w-8 rounded-full" src={user.imageUrl} alt="" />
+                            <Image className="h-8 w-8 rounded-full" src={user.imageUrl} width="32" height="32" alt="" />
                           </Menu.Button>
                         </div>
                         <Transition
@@ -148,7 +149,7 @@ export default function Home() {
                 <div className="border-t border-gray-700 pb-3 pt-4">
                   <div className="flex items-center px-5">
                     <div className="flex-shrink-0">
-                      <img className="h-10 w-10 rounded-full" src={user.imageUrl} alt="" />
+                      <Image className="h-10 w-10 rounded-full" src={user.imageUrl} width="32" height="32" alt="" />
                     </div>
                     <div className="ml-3">
                       <div className="text-base font-medium leading-none text-white">{user.name}</div>

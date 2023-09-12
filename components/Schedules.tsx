@@ -31,7 +31,7 @@ export default function Schedules() {
             </div>
             <div className="flex flex-wrap grow gap-4 content-start">
             {dayData.scheduled.map((sched) => (
-              <div className={`rounded p-2 group transition-all duration-100 ease-out whitespace-nowrap ${users[sched.who[0]]?.color ?? 'bg-gray-200'}`}>
+              <div key="{sched.id}" className={`rounded p-2 group transition-all duration-100 ease-out whitespace-nowrap ${users[sched.who[0]]?.color ?? 'bg-gray-200'}`}>
                 <span>{sched.stops[0].when} - {sched.stops[sched.stops.length-1].when}</span>
                 <span className="group-hover:inline">&nbsp;{sched.who.map((who) => users[who]?.name??'?').join(', ')}</span>
               </div>

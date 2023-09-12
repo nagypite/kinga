@@ -1,8 +1,6 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 
-import {meta} from '../lib/data'
-
 const inter = Inter({ subsets: ['latin'] })
 
 export default function RootLayout({

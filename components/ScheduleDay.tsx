@@ -6,7 +6,7 @@ type Props = {
 
 export default function ScheduleDay({day}: Props) {
   return (
-
+    <p>ScheduleDay</p>
   )
 }
 
