@@ -9,7 +9,11 @@ import NavMenu from '@/components/NavMenu'
 import TripDetails from '@/components/TripDetails'
 import { getTrip } from '@/lib/data'
 
-export default async function TripPage({params}) {
+type Params = {
+  id:  Number,
+}
+
+export default async function TripPage({params}: {params: Params}) {
   const trip = await getTrip(params.id)
 
   if (!trip) notFound()
@@ -30,7 +34,7 @@ export default async function TripPage({params}) {
             </div>
           </div>
         </header>
-      <TripDetails trip={trip} />
+        <TripDetails trip={trip} />
       </div>
     </>
   )

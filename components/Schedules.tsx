@@ -1,7 +1,7 @@
 import 'server-only'
 
-import { getMonthInterval } from '../lib/date.tsx'
-import { processIntervalDays } from '../lib/data.tsx'
+import { getMonthInterval } from '@/lib/date'
+import { processIntervalDays } from '@/lib/data'
 
 import ScheduleDay from './ScheduleDay'
 
