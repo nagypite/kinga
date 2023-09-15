@@ -25,3 +25,15 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.btn {
+  @apply font-bold py-2 px-4 rounded bg-blue-500 text-white;
+}
+
+.btn:hover {
+  @apply bg-blue-700;
+}
+
+.tag {
+  @apply inline-block rounded p-2 m-2 whitespace-nowrap;
+}
