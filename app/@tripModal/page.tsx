@@ -4,10 +4,14 @@ setDefaultOptions({locale:hu})
 
 import { notFound } from 'next/navigation'
 
-import { getTrip, getUser, tripData } from '@/lib/data.tsx'
+import { getTrip, tripData } from '@/lib/data'
 import Modal from '@/components/Modal'
 
-export default async function TripModal(params) {
+type Params = {
+  id:  Number,
+}
+
+export default async function TripModal({params}: {params: Params}) {
   const trip = await getTrip(params.id)
   if (!trip) notFound()
 
