@@ -4,7 +4,11 @@ import { getTrip } from '@/lib/data'
 import Modal from '@/components/Modal'
 import TripDetails from '@/components/TripDetails'
 
-export default async function TripModal(params) {
+type Params = {
+  id: number
+}
+
+export default async function TripModal(params: Params) {
   const trip = await getTrip(params.id)
   if (!trip) notFound()
 

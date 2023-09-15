@@ -10,7 +10,7 @@ import TripDetails from '@/components/TripDetails'
 import { getTrip } from '@/lib/data'
 
 type Params = {
-  id:  Number,
+  id:  number,
 }
 
 export default async function TripPage({params}: {params: Params}) {

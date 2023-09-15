@@ -5,7 +5,7 @@ setDefaultOptions({locale:hu})
 import TripModal from '@/components/TripModal'
 
 type Params = {
-  id:  Number,
+  id:  number,
 }
 
 export default async function TripPage({params}: {params: Params}) {

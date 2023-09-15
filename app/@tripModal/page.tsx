@@ -8,7 +8,7 @@ import { getTrip, tripData } from '@/lib/data'
 import Modal from '@/components/Modal'
 
 type Params = {
-  id:  Number,
+  id:  number,
 }
 
 export default async function TripModal({params}: {params: Params}) {
